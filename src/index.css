@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-900: #0b0d17;
+  --blue-300: #d0d6f9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./assets/fonts/Barlow/Barlow-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("./assets/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Bellefair";
+  src: url("./assets/fonts/Bellefair/Bellefair-Regular.ttf") format("truetype");
+}
+.home-bg {
+  background-image: url("./assets/home/background-home-desktop.jpg");
+}
+.crew-bg {
+  background-image: url("./assets/crew/background-crew-desktop.jpg");
+}
+.destination-bg {
+  background-image: url("./assets/destination/background-destination-desktop.jpg");
+}
+.technology-bg {
+  background-image: url("./assets/technology/background-technology-desktop.jpg");
+}
+
+.register-img {
+  background-image: url("../public/assets/register/space-bg-2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.technology-img {
+  background-image: url("../public/assets/technology/image-launch-vehicle-portrait.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Barlow";
+}
+
+.nav-links {
+  background-color: hsla(0, 0%, 99%, 0.034);
+  backdrop-filter: blur(10px);
+  z-index: 999999;
+}
+
+.line {
+  height: 1px;
+  z-index: 1;
+}
+
+.navlink {
+  @apply hover:md:border-b-4 hover:border-r-4 transition-all ease-in-out duration-100 md:py-6 cursor-pointer pr-2 uppercase md:w-auto w-full pl-10 md:pl-0 flex md:hover:border-r-0 py-3;
+
+  border-color: hsla(0, 0%, 100%, 0.7);
+}
+
+.destination-link {
+  @apply hover:border-b-4 transition-all ease-in-out duration-100 py-3 cursor-pointer pr-1 uppercase w-auto pl-0 flex text-xl;
+  border-color: hsla(0, 0%, 100%, 0.7);
+}
+
+.active-destination {
+  @apply border-b-4  border-white;
+}
+
+#home {
+  @apply md:m-0 mt-32;
+}
+
+b {
+  @apply mr-3;
+}
+
+.active-link {
+  @apply md:border-b-4 md:border-r-0 border-r-4 border-white;
+}
+
+.large,
+.inner-circle,
+.destination,
+.detail .number,
+.crew,
+.role,
+.label {
+  font-family: "Bellefair";
+}
+
+.explore-circle:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.step {
+  @apply flex text-xl uppercase justify-center w-full items-center md:justify-start gap-3 tracking-widest;
+}
+
+.step .number {
+  color: var(--blue-300);
+  @apply font-semibold;
+}
+
+.detail .text {
+  @apply text-xl;
+}
+
+.detail .text,
+.welcome-text {
+  font-family: "Barlow Condensed";
+}
+
+.detail .number {
+  @apply text-4xl;
+}
+
+.detail {
+  @apply flex flex-col items-center lg:items-start my-10 gap-5;
+}
+
+.crew-link {
+  @apply h-3 w-3 lg:h-5 lg:w-5 rounded-full bg-gray-600 hover:bg-slate-300 cursor-pointer;
+}
+
+.active-crew {
+  @apply bg-white hover:bg-white;
+}
+
+.crew-img {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.role,
+.bio-text {
+  color: var(--blue-300);
+}
+
+.technology-link {
+  @apply w-20 h-20  border-2 rounded-full flex justify-center items-center text-xl hover:border-white cursor-pointer font-bold mt-10 border-gray-500;
+  /* border-color: var(--blue-300); */
+}
+
+.active-technology {
+  color: var(--blue-900);
+  @apply bg-white;
+}
+
+.description-text {
+  line-height: 2.5rem;
+}
+
+.input-group {
+  height: 80px;
+  line-height: 80px;
+}
+
+.input {
+  line-height: 50px;
+  border-radius: 10px;
+  transition: 0.1s ease;
+  z-index: 1111;
+  padding: 0 20px;
+}
+.label {
+  transition: 0.2s ease;
+  padding: 0 15px;
+  margin: 13px 20px;
+}
+.active {
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-15px, -29px) scale(0.88);
+  z-index: 1111;
+  color: rgb(95, 143, 255);
+}
+
+.input:focus {
+  border-color: rgb(76, 40, 255);
+  border-width: 3px;
+}
+/*  */
+
+/* animations */
+@keyframes slide-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+}
+/* Media Queries */
+@media (prefers-reduced-motion: no-preference) {
+  .animated {
+    view-timeline-name: --item-timeline;
+    animation: slide-fade-in both;
+    animation-timeline: --item-timeline;
+    animation-range: contain 0% contain 40%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .home-bg {
+    background-image: url("./assets/home/background-home-mobile.jpg");
+  }
+  .crew-bg {
+    background-image: url("./assets/crew/background-crew-mobile.jpg");
+  }
+  .destination-bg {
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+  }
+  .technology-bg {
+    background-image: url("./assets/technology/background-technology-mobile.jpg");
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .home-bg {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+  }
+  .crew-bg {
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+  }
+  .destination-bg {
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+  .technology-bg {
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .technology-img {
+    height: 40rem;
+  }
+}
