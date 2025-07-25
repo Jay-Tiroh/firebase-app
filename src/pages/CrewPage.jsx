@@ -3,7 +3,7 @@ import { Outlet, useLoaderData, useParams } from "react-router-dom";
 import Crew from "../components/crew";
 
 export const crewLoader = async ({ params }) => {
-  const res = await fetch("http://localhost:3000/crew");
+  const res = await fetch("/api/crew");
   const crew = await res.json();
   return { crew };
 };

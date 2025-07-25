@@ -3,7 +3,7 @@ import { Outlet, useLoaderData, useParams } from "react-router-dom";
 import PlanetaryBody from "../components/PlanetaryBody";
 
 export const destinationLoader = async ({ params }) => {
-  const res = await fetch("http://localhost:3000/destinations");
+  const res = await fetch("/api/destinations");
   const destinations = await res.json();
   return { destinations };
 };

@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Technology from "../components/technology";
 
 export const technologyLoader = async ({ params }) => {
-  const res = await fetch("http://localhost:3000/technology");
+  const res = await fetch("/api/technology");
   const technology = await res.json();
   return { technology };
 };
