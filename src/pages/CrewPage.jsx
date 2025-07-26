@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Outlet, useLoaderData, useParams } from "react-router-dom";
-import Crew from "../components/crew";
+import { useLoaderData } from "react-router-dom";
+import Crew from "../components/Crew";
 
 export const crewLoader = async ({ params }) => {
   const res = await fetch("/api/crew");

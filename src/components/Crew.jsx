@@ -1,5 +1,5 @@
 import React from "react";
-// import crewImg from "../";
+
 import CrewNav from "./CrewNav";
 const Crew = ({ crew, switchRole, role }) => {
   const crewMember = crew.find((item) => item.role === role);

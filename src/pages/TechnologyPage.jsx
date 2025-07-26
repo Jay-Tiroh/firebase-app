@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import Technology from "../components/technology";
+import Technology from "../components/Technology";
 
 export const technologyLoader = async ({ params }) => {
   const res = await fetch("/api/technology");

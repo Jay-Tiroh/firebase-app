@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import PlanetaryBody from "../components/PlanetaryBody";
 
 export const destinationLoader = async ({ params }) => {
