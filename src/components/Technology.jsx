@@ -3,13 +3,13 @@ import TechnologyNav from "./TechnologyNav";
 const Technology = ({ technology, name, switchName }) => {
   const technologicalTool = technology.find((item) => item.name === name);
   const img = technologicalTool.images.portrait;
-  console.log(technologicalTool);
-  const technologyImg = `../../public${img.split(".")[1]}.jpg`;
+  // console.log(technologicalTool);
+  // const technologyImg = `${img.split(".")[1]}.jpg`;
   return (
     <div className="flex flex-col justify-center items-center w-full lg:flex-row-reverse lg:gap-14 lg:justify-between">
       <img
         className="technology-img w-full mt-32 h-96 lg:w-2/5 mb-10"
-        src={technologyImg}
+        src={img}
       />
       <div className="details w-full lg:w-1/2 flex flex-col lg:justify-between  lg:flex-row lg:ml-14 lg:items-start">
         <TechnologyNav switchName={switchName} />

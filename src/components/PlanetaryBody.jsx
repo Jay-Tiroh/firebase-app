@@ -6,15 +6,11 @@ const PlanetaryBody = ({ destinations, destination, switchDestination }) => {
   const satellite = destinations.find((item) => item.name === destination);
 
   const img = satellite.images.png;
-  const satelliteImg = `../../public${img.split(".")[1]}.png`;
+  // const satelliteImg = `../../public${img.split(".")[1]}.png`;
   return (
     <div className="flex flex-col items-center text-white w-full lg:flex-row lg:justify-between lg:items-start gap-10">
       <div className="destination-img mt-10 lg:w-1/2">
-        <img
-          src={satelliteImg}
-          alt="satellite"
-          className="scale-75 md:scale-100 "
-        />
+        <img src={img} alt="satellite" className="scale-75 md:scale-100 " />
       </div>
       <div className="details w-full lg:w-1/2 ">
         <DestinationNav switchDestination={switchDestination} />

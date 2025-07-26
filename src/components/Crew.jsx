@@ -5,7 +5,7 @@ const Crew = ({ crew, switchRole, role }) => {
   const crewMember = crew.find((item) => item.role === role);
 
   const img = crewMember.images.png;
-  const crewImg = `../../public${img.split(".")[1]}.png`;
+  // const crewImg = `../../public${img.split(".")[1]}.png`;
   return (
     <div className="flex flex-col items-center text-white w-full lg:flex-row lg:justify-between lg:items-end md:mt-10 lg:gap-10">
       <div className="details w-full lg:w-1/2 flex flex-col lg:justify-between lg:gap-32">
@@ -24,7 +24,7 @@ const Crew = ({ crew, switchRole, role }) => {
       </div>
 
       <div className="crew-img  lg:w-1/2 mt-5">
-        <img src={crewImg} alt="crew" />
+        <img src={img} alt="crew" />
       </div>
     </div>
   );
